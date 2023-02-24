@@ -1,0 +1,19 @@
+<!-- <p *ngFor="let hero of heroes">
+    {{hero}} </p> -->
+<h2>My heroes</h2>
+<ul class="heroes">
+<li *ngFor="let hero of heroes">
+    <span>{{hero.id | custom:10}} :</span>
+    <span >{{hero.name}} </span>
+    <button (click)="heroCLick(hero)">click</button>
+</li>
+
+</ul>
+
+
+
+<div *ngIf="selectedHero.name">
+    <span >selectedHero : {{selectedHero.name}} :</span>
+    <app-hero-detail  [inputHero]="selectedHero"(newHero)="updateHeroFromChild($event)"></app-hero-detail>
+    
+</div> 

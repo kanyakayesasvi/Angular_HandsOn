@@ -1,0 +1,10 @@
+<div>
+    <p>Student Details Of {{inputstudent.id}} </p><br>
+    <span>id:{{inputstudent.id}}</span><br>
+    <span>name:{{inputstudent.name}}</span><br>
+    <span>class:{{inputstudent.class}}</span><br>
+    <span>rank{{inputstudent.rank}}</span><br>
+    <span>update the rank:<input type="number" [(ngModel)]="inputstudent.rank" (keyup)="senttoparent(inputstudent)"></span>
+    <button (click)="updateDetails(inputstudent)">Update</button>
+    
+</div>

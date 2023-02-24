@@ -1,0 +1,42 @@
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  </style>
+  <h1>Nation data</h1>
+ 
+  <div >
+    <table >
+      <thead>
+        <tr>
+          <th scope="col">ID Nation</th> 
+          <th scope="col">Nation</th>
+          <th scope="col">Population</th>
+          <th scope="col">ID Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let da of d">
+          <td>{{da["ID Nation"]}}</td>
+          <td>{{da.Nation}}</td>
+          <td>{{da.Population}}</td>
+          <td>{{da["ID Year"]}}</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+

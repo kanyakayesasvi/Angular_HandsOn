@@ -1,0 +1,42 @@
+
+<!-- <ul class ="students">
+<li *ngFor="let student of students">
+    <span>{{student.id}}</span>
+</li>
+</ul> -->
+
+<p>STUDENT DETAILS</p>
+<button (click)="getAsec()">up</button>
+<button (click)="getDesc()">Down</button>
+
+<table   >
+    <thead>
+    <tr>
+      <th> STUDENT ID  </th>
+      <th> STUDENT NAME  </th>
+      <th> GENDER  </th>
+      <th> CLASS  </th>
+      <th> RANK  </th>
+      <th> Details</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr   *ngFor="let student of students" style="width:75%" >
+      <td> {{student.id}}</td>
+      <td>  {{student.name}}</td>
+      <td> {{student.gender}} </td>
+      <td> {{student.Class}} </td>
+      <td> {{student.rank}} </td>
+      <td> <button  (click)="studentCLick(student)">Get detalis</button></td>
+    </tr>
+</tbody>
+    
+  </table>
+
+
+<div *ngIf="this.selectedStudent.name">
+    <app-student-details [inputstudent]="selectedStudent"> </app-student-details>
+</div>
+
+

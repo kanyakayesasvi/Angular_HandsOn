@@ -1,0 +1,31 @@
+<!-- <label>FirstName</label>
+<input [(ngModel)]="req.firstName"/><br>
+<label>Lastname</label>
+<input [(ngModel)]="req.lastName"/><br>
+<label>Address</label>
+<input [(ngModel)]="req.address"/><br>
+<label>AGE</label>
+<input [(ngModel)]="req.age"/>
+
+
+<button (click)="senddata()">send data</button> -->
+
+<form [formGroup]="userForm">
+  <label for="firstname">Name:</label>
+  <input id="firstname" type="text" formControlName="firstname">
+  <label for="lastName">lastname</label><br>
+  <input id="lastName" type="text" formControlName="lastname">
+  <label for="address">address:</label>
+  <input id="address" type="text" formControlName="address">
+  <label for="age">age:</label>
+  <input id="age" type="number" formControlName="age">
+  <label>catg</label>
+  <select formControlName="userType">
+    <option value="student">student</option>
+    <option value="prof">Prof</option></select>
+  <button   [disabled]="!userForm.valid"  (click)="senddata()" > send data </button>
+</form>
+
+
+
+

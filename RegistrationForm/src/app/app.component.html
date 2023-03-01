@@ -1,0 +1,37 @@
+
+<form [formGroup]="userForm">
+  <label for="first_name">First Name   </label>
+  <input id="first_name" type="text" formControlName="first_name"><br><br>
+
+  <label for="last_name">Last Name </label>
+  <input id="last_name" type="text" formControlName="last_name"><br><br>
+
+  <label for="middle_name">Middle Name </label>
+  <input id="middle_name" type="text" formControlName="middle_name"><br><br>
+
+
+
+  <label for="email">Email </label>
+  <input id="email" type="text" formControlName="email"><br><br>
+
+  <label for="gender">Gender </label>
+  <input id="gender" type="text" formControlName="gender"><br><br>
+
+  <label for="phoneNumber">PhoneNumber </label>
+  <input id="phoneNumber" type="number" formControlName="phoneNumber"><br><br>
+
+
+  <label for="birthday">Birthday </label>
+  <input id="birthday" type="date" formControlName="birthday"><br><br>
+
+  <label for="address">Address </label>
+  <input id="address" type="text" formControlName="address"><br><br>
+
+
+  <label for="password">Password </label>
+  <input id="password" type="text" formControlName="password"><br><br>
+
+  <button class="submit"  [disabled]="!userForm.valid"  (click)="senddata()" >  Register</button>
+
+  <button  class="reset" (click)="onReset()">Cancel</button>
+</form>

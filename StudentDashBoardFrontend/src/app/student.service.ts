@@ -12,13 +12,19 @@ export class StudentService {
   public registerStudent(studentData: any) {
     return this.http.post(this.API + '/RegisterStudent', studentData);
   }
-  public getStudent() {
+  public  getStudent() {
     return this.http.get(this.API + '/GetStudents');
   }
   public deleteStudents(id: any) {
     return this.http.delete(this.API + '/DeleteStudent/' + id);
   }
-  public updateStudent(student:any){
-    return this.http.put(this.API +' /UpdateStudent',student);
+
+   public getDetailsbyId(id: any) {
+    return this.http.get(this.API + '/GetStudentsById/' + id);
+  }
+
+  public updateStudent(rollnumber:number,student:any){
+    console.log(this.API +'/UpdateStudent/'+ rollnumber);
+    return this.http.put(this.API +'/UpdateStudent/'+ rollnumber ,student);
   }
 }

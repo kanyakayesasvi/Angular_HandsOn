@@ -1,0 +1,27 @@
+<div>
+  <div >
+    <h1>STUDENT DASHBOARD</h1>
+  </div><br>
+
+  <div>
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+      <div >
+        <label for="student_name">Student Name </label>
+        <input type="text" #student_name (ngModel)="student_name" name="student_name" id="student_name" class="form-control" placeholder="Enter The Student Name">
+      </div><br>
+      <div >
+        <label for="phone_number">Student Phone Number </label>
+        <input type="text" #phone_number (ngModel)="phone_number" name="phone_number" id="phone_number" class="form-control" placeholder="Enter The Student Phone Number">
+      </div><br>
+
+
+      <div >
+        <input   type="submit" value="Register" class="btn success">
+      </div>
+      <div>
+        <button  class="btn info" type="button"  (click)="back()">BACK</button>
+      </div>
+
+
+    </form>
+  </div>

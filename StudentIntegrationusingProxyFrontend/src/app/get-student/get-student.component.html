@@ -1,0 +1,31 @@
+<h1>Student Details</h1>
+
+
+
+<div >
+  <table>
+    <thead class="thead">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>Phone Number</th>
+
+      </tr>
+
+    </thead>
+
+
+    <tbody class="tbody">
+      <tr *ngFor="let s of Sd">
+      <td>{{s.rollnub}}</td>
+      <td>{{s.student_name}}</td>
+      <td> {{s.phone_number}} </td>
+
+
+    </tr>
+    <td><button class="btn info" type="button"  (click)="back()">BACK</button></td>
+
+
+    </tbody>
+  </table>
+</div>

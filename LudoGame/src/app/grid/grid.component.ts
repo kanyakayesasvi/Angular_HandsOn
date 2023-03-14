@@ -116,6 +116,24 @@ export class GridComponent {
     }
   }
   killCheck(pin:Pin){
+
+    let safeZones = [
+      {x:1,y:6},
+      {x:6,y:2},
+      {x:8,y:1},
+      {x:12,y:6},
+      {x:13,y:8},
+      {x:8,y:12},
+      {x:6,y:13},
+      {x:2,y:8},
+    ]
+
+    for(let c of safeZones){
+      if(Math.floor(pin.x) == c.x && Math.floor(pin.y) == c.y){
+        console.log("Player " + pin.ownerID + " piece" + " is in safe Zone!")
+        return;
+      }
+    }
     for(let p of this.GameBoard.pins){
       if(Math.floor(p.x) == Math.floor(pin.x) && Math.floor(p.y) == Math.floor(pin.y) && p.id!=pin.id && p.ownerID!=pin.ownerID){
         console.log("Player "+ pin.ownerID+"["+pin.id+"]" +" killed "+ "Player "+ p.ownerID+"["+p.id+"]"+"!")
